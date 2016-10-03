@@ -18,11 +18,11 @@ omero_matlab_segmentation.m
   - run script
   
 omero_matlab_dataExtraction.m
-  -edit imageId
-  -run script
+  - edit imageId
+  - run script
   
 omero_matlab_plotting.m
-  -edit imageId
-  -edit fileannId
-  -run script
+  - edit imageId
+  - edit fileannId
+  - run script
   
