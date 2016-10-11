@@ -7,7 +7,7 @@ session = omero_client.createSession();
 omero_client.enableKeepAlive(60);
 
 %params
-imageId = 513;
+imageId = 515;
 
 %getImage/plane from OMERO server
 images = getImages(session, imageId);
@@ -32,16 +32,22 @@ for thisROI  = 1:n
         convertedvec = (coordsvec(:,1)-1)*size(plane,1) + coordsvec(:,2);%2d to 1d conversion for indices
         
         %Calculations on a perROI basis
-        resultvec = [resultvec ; thisROI ns mean(plane(convertedvec)) std(plane(convertedvec)) cov(plane(convertedvec)) var(plane(convertedvec)) median(plane(convertedvec)) max(plane(convertedvec)) min(plane(convertedvec)) length(convertedvec)]; %#ok<*AGROW>
+        resultvec = [resultvec ; thisROI ns mean(plane(convertedvec)) std(plane(convertedvec)) length(convertedvec)]; %#ok<*AGROW>
         maskImage(convertedvec) = 1;
         disp([thisROI ns])
     end
 end
 %write the table of results to a csv file
-xlswrite('test.csv',resultvec)
+headers = {'ROINo', 'ShapeNo', 'MeanIntensity', 'Std-Deviation', 'Area'};
+fid = fopen('ExtractedData.csv', 'w') ;
+fprintf(fid, '%s,', headers{1,1:end-1}) ;
+fprintf(fid, '%s\n', headers{1,end}) ;
+fclose(fid) ;
 
-%attach file as an attachment to OMERO Image
-fileAnnotation = writeFileAnnotation(session, 'test.csv');
+dlmwrite('ExtractedData.csv', num2cell(resultvec), '-append') ;
+
+% %attach file as an attachment to OMERO Image
+fileAnnotation = writeFileAnnotation(session, 'ExtractedData.csv');
 link2 = linkAnnotation(session, fileAnnotation, 'image', imageId);
 
 %Close Session

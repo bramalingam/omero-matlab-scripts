@@ -14,7 +14,7 @@ fileannId = 23;
 getFileAnnotationContent(session, fileannId, 'downloadedResultFile.csv');
 
 %Read downloaded file and plot using matlab
-M = csvread('downloadedResultFile.csv');
+M = csvread('downloadedResultFile.csv',1,0);
 plot(M(:,3),M(:,4),'o');
 xlabel('Mean')
 ylabel('Std-Deviation')
