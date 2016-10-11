@@ -1,7 +1,7 @@
 # omero-matlab-scripts
 
 1) Download omero-matlab toolbox from the following link,
-http://downloads.openmicroscopy.org/omero/5.2.5/
+http://downloads.openmicroscopy.org/omero/5.2.6/
 
 2) Download the example scripts from this repository, and move them into the omero-matlab toolbox folder.
 
