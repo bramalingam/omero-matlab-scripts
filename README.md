@@ -8,9 +8,10 @@ http://downloads.openmicroscopy.org/omero/5.2.6/
 3) open MATLAB
 
 Type the following commands in the Matlab "Command Window":
-4) >>cd("PATH/TO/OMERO-MATLAB-TOOLBOX/") %change directory to the matlab toolbox folder (Hit Return)
-5) >>addpath(genpath(pwd)) %adds the toolbox and the subfolders to the matlab path
-
+```
+>>cd("PATH/TO/OMERO-MATLAB-TOOLBOX/") %change directory to the matlab toolbox folder (Hit Return)
+>>addpath(genpath(pwd)) %adds the toolbox and the subfolders to the matlab path
+```
 6) Edit Credentials:
 Edit the "ice.config" file within the omero-matlab toolbox to update the following parameters,
 omero.host= HOST
