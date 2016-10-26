@@ -27,14 +27,14 @@ Edit the individual scripts:
 
  -  ```>>edit omero_matlab_segmentation.m %(Hit Return)```
     - Edit line 10 : imageId = 514; TO imageId = IMAGEID OF CHOICE;%edit imageId and Save script
-    - run script : >>omero_matlab_segmentation %(Hit Return) 
+    - run script : ```>>omero_matlab_segmentation %(Hit Return)```
   
  -  ```>>edit omero_matlab_dataExtraction.m %(Hit Return)```
     - Edit line 10 : imageId = 515; TO imageId = IMAGEID OF CHOICE; %edit imageId and Save script
-    - run script : >>omero_matlab_dataExtraction %(Hit Return) 
+    - run script : ```>>omero_matlab_dataExtraction %(Hit Return)```
   
  -  ```>>edit omero_matlab_plotting.m %(Hit Return)```
     - Edit line 10 : imageId = 513; TO imageId = IMAGEID OF CHOICE; %edit imageId and Save script
     - Edit line 11 : fileannId = 23; TO fileannId = FILEANNOTATIONID OF CHOICE;%edit fileannId and Save script
-    - run script : >>omero_matlab_plotting %(Hit Return)
+    - run script : ```>>omero_matlab_plotting %(Hit Return)```
   
