@@ -16,8 +16,8 @@
     Edit the "ice.config" file within the omero-matlab toolbox to update the following parameters,
     
     ```
-    omero.host= HOST
-    omero.port= PORT
+    omero.host= HOSTNAME
+    omero.port= PORT ID
     omero.username= USERNAME
     omero.password= PASSWORD
     ```
